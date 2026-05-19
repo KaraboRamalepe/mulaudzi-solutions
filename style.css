@@ -827,3 +827,129 @@ textarea {
         padding: 25px;
     }
 }
+/* =========================
+   INDUSTRIES SECTION
+========================= */
+
+.industries-section {
+    background: #f8fafc;
+    text-align: center;
+}
+
+.industries-section h2 {
+    margin-bottom: 20px;
+}
+
+.industries-section .tags {
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+
+/* =========================
+   LOGO SLIDER
+========================= */
+
+.logo-slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    padding: 20px 0;
+}
+
+/* GRADIENT EDGES */
+
+.logo-slider::before,
+.logo-slider::after {
+    content: "";
+    position: absolute;
+    top: 0;
+
+    width: 120px;
+    height: 100%;
+
+    z-index: 2;
+}
+
+.logo-slider::before {
+    left: 0;
+
+    background: linear-gradient(
+        to right,
+        #f8fafc,
+        transparent
+    );
+}
+
+.logo-slider::after {
+    right: 0;
+
+    background: linear-gradient(
+        to left,
+        #f8fafc,
+        transparent
+    );
+}
+
+/* TRACK */
+
+.logo-track {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+
+    width: max-content;
+
+    animation: scrollLogos 25s linear infinite;
+}
+
+/* IMAGES */
+
+.logo-track img {
+    width: 180px;
+    height: 110px;
+
+    object-fit: contain;
+
+    background: rgb(74, 170, 192);
+
+    padding: 15px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+
+    transition: 0.3s ease;
+}
+
+.logo-track img:hover {
+    transform: scale(1.08);
+}
+
+/* ANIMATION */
+
+@keyframes scrollLogos {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .logo-track {
+        gap: 30px;
+    }
+
+    .logo-track img {
+        width: 130px;
+        height: 90px;
+    }
+}
