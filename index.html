@@ -5,7 +5,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mulaudzi Solutions</title>
+
     <link rel="stylesheet" href="style.css" />
+    <meta name="theme-color" content="#839cd8">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
@@ -20,8 +25,12 @@
                 <span>Mulaudzi Solutions</span>
             </div>
 
-            <!-- Links -->
-            <ul class="nav-links">
+            <button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation">
+                ☰
+            </button>
+
+            <!-- Links (FIXED ID for JS) -->
+            <ul id="nav-links" class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#team">Team</a></li>
@@ -35,9 +44,10 @@
     <!-- HERO -->
     <header class="hero">
         <div class="water-overlay"></div>
+
         <div class="container hero-grid">
 
-            <!-- Left -->
+            <!-- LEFT -->
             <div class="hero-text">
 
                 <h4>CLEAN CAR. HAPPY YOU.</h4>
@@ -58,38 +68,22 @@
 
             </div>
 
-            <!-- Right -->
+            <!-- RIGHT (FIXED TYPO ERROR) -->
             <div class="hero-image">
-                <img src="public/mchero.png" alt="Car Wash Hero Image">
+                <img src="public/mchero.png" alt="Car Wash Hero Image" loading="lazy">
             </div>
 
         </div>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     </header>
 
     <!-- ABOUT -->
     <section id="about" class="section about-section">
 
-        <!-- Floating Icons -->
-        <div class="floating-icon icon1">
-            <i class="fas fa-car-side"></i>
-        </div>
-
-        <div class="floating-icon icon2">
-            <i class="fas fa-soap"></i>
-        </div>
-
-        <div class="floating-icon icon3">
-            <i class="fas fa-spray-can-sparkles"></i>
-        </div>
-
-        <div class="floating-icon icon4">
-            <i class="fas fa-droplet"></i>
-        </div>
-
-        <div class="floating-icon icon5">
-            <i class="fas fa-shield"></i>
-        </div>
+        <div class="floating-icon icon1"><i class="fas fa-car-side"></i></div>
+        <div class="floating-icon icon2"><i class="fas fa-soap"></i></div>
+        <div class="floating-icon icon3"><i class="fas fa-spray-can-sparkles"></i></div>
+        <div class="floating-icon icon4"><i class="fas fa-droplet"></i></div>
+        <div class="floating-icon icon5"><i class="fas fa-shield"></i></div>
 
         <div class="container">
             <h2>Company Overview</h2>
@@ -107,192 +101,126 @@
 
     <!-- VISION & MISSION -->
     <section class="section alt">
-
         <div class="container grid-2">
 
-            <!-- Vision -->
             <div class="card vm-card">
-
                 <div class="vm-overlay"></div>
-
                 <div class="vm-content">
-
-                    <div class="vm-icon">
-                        👁️
-                    </div>
-
+                    <div class="vm-icon">👁️</div>
                     <h2>Vision</h2>
-
-                    <p>
-                        To be the most trusted partner for cleaning, safety, and scenting solutions across Africa.
-                    </p>
-
+                    <p>To be the most trusted partner for cleaning, safety, and scenting solutions across Africa.</p>
                 </div>
-
             </div>
 
-            <!-- Mission -->
             <div class="card vm-card">
-
                 <div class="vm-overlay"></div>
-
                 <div class="vm-content">
-
-                    <div class="vm-icon">
-                        🎯
-                    </div>
-
+                    <div class="vm-icon">🎯</div>
                     <h2>Mission</h2>
-
-                    <p>
-                        To deliver high-quality hygiene and safety solutions that enhance health and comfort.
-                    </p>
-
+                    <p>To deliver high-quality hygiene and safety solutions that enhance health and comfort.</p>
                 </div>
-
             </div>
 
         </div>
-
     </section>
 
-    <!-- SERVICES -->
-    <section id="services" class="section">
+    <!-- PRODUCTS & SERVICES FLOW -->
+    <section id="services-flow" class="section process-section">
         <div class="container">
 
-            <h2>Products & Services</h2>
+            <h2>Products & Services Process</h2>
 
-            <div class="grid-2">
+            <div class="process-grid">
 
-                <!-- Household Cleaning -->
-                <div class="card">
-                    <img src="public/services1.png" alt="">
+                <div class="step">
+                    <div class="step-number">1</div>
                     <h3>Household Cleaning</h3>
-                    <p>
-                        High-quality household cleaning solutions for homes and offices.
-                    </p>
-
                     <ul>
                         <li>Multipurpose Cleaners</li>
-                        <li>Dish-washing Liquids</li>
-                        <li>Floor & Surface Cleaners</li>
-                        <li>Toilet Paper Supply</li>
-                        <li>Residential & Commercial Cleaning</li>
                         <li>Deep Cleaning & Sanitization</li>
                         <li>Carpet & Upholstery Care</li>
                     </ul>
-                    <a href="packages.html" class="btn card-btn">Learn More</a>
                 </div>
 
-                <!-- Industrial Chemicals -->
-                <div class="card">
-                    <img src="public/service2.jpg" alt="">
+                <div class="step">
+                    <div class="step-number">2</div>
                     <h3>Industrial Chemicals</h3>
-                    <p>
-                        Professional-grade industrial chemicals for businesses and factories.
-                    </p>
-
                     <ul>
-                        <li>Industrial & Domestic Degreasers</li>
-                        <li>Disinfectants & Sanitizers</li>
-                        <li>Cleaning Products</li>
+                        <li>Degreasers & Sanitizers</li>
                         <li>Car-wash Shampoo</li>
+                        <li>Cleaning Solutions</li>
                     </ul>
-                    <a href="packages.html" class="btn card-btn">Learn More</a>
                 </div>
 
-                <!-- PPE Supply -->
-                <div class="card">
-                    <img src="public/service3.avif" alt="">
+                <div class="step">
+                    <div class="step-number">3</div>
                     <h3>PPE Supply</h3>
-                    <p>
-                        Reliable personal protective equipment for workplace safety.
-                    </p>
-
                     <ul>
-                        <li>Gloves, Masks, Safety Goggles</li>
+                        <li>Gloves & Masks</li>
+                        <li>Safety Goggles</li>
                         <li>Protective Clothing</li>
-                        <li>Hand Hygiene Products</li>
                     </ul>
-                    <a href="packages.html" class="btn card-btn">Learn More</a>
                 </div>
 
-                <!-- Car Wash -->
-                <div class="card">
-                    <img src="public/service4.jpg" alt="">
+                <div class="step">
+                    <div class="step-number">4</div>
                     <h3>Car Wash & Detailing</h3>
-                    <p>
-                        Complete car wash and detailing services for a showroom shine.
-                    </p>
-
                     <ul>
-                        <li>Car Wash Services</li>
-                        <li>Interior & Exterior Detailing</li>
-                        <li>Wax & Polish Treatment</li>
-                        <li>Engine Bay Cleaning</li>
+                        <li>Interior & Exterior Wash</li>
+                        <li>Wax & Polish</li>
+                        <li>Engine Cleaning</li>
                     </ul>
-                    <a href="packages.html" class="btn card-btn">Learn More</a>
                 </div>
 
-                <!-- NEW: Diffusers -->
-                <div class="card">
-                    <img src="public/diff.jpg" alt="">
-                    <h3>Diffusers & Fragrance Solutions</h3>
-                    <p>
-                        Air care and fragrance solutions for vehicles and spaces.
-                    </p>
-
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <h3>Fragrance Solutions</h3>
                     <ul>
                         <li>Car Diffusers</li>
                         <li>Reed Diffusers</li>
-                        <li>Essential Oils & Refills</li>
+                        <li>Essential Oils</li>
                     </ul>
-                    <a href="packages.html" class="btn card-btn">Learn More</a>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">6</div>
+                    <h3>Support & Delivery</h3>
+                    <ul>
+                        <li>Fast Supply Chain</li>
+                        <li>Client Support</li>
+                        <li>Bulk Orders</li>
+                    </ul>
                 </div>
 
             </div>
 
         </div>
     </section>
-
     <!-- TEAM -->
     <section id="team" class="section alt">
         <div class="container">
             <h2>Leadership Team</h2>
 
             <div class="grid-2">
-
                 <div class="card">
                     <h3>Shane Mulaudzi</h3>
-
-                    <p>
-                        Operational background in retail, sales, and cleaning solutions. Experienced in business
-                        development and partnerships.
-                    </p>
-
+                    <p>Operational background in retail, sales, and cleaning solutions.</p>
                     <p><strong>📞</strong> 079 213 0538</p>
                     <p><strong>✉️</strong> shane@mulaudzisolutions.co.za</p>
                 </div>
 
                 <div class="card">
                     <h3>Chulumanco Fuzile</h3>
-
-                    <p>
-                        Administration & marketing professional with experience in sales and financial advisory
-                        services.
-                    </p>
-
+                    <p>Administration & marketing professional with experience in sales.</p>
                     <p><strong>📞</strong> 073 260 5131</p>
                     <p><strong>✉️</strong> chulu@mulaudzisolutions.co.za</p>
                 </div>
-
             </div>
         </div>
     </section>
 
     <!-- INDUSTRIES -->
     <section class="section industries-section">
-
         <div class="container">
 
             <h2>Clients & Industries Served</h2>
@@ -307,48 +235,38 @@
                 <span>Residential</span>
             </div>
 
-            <!-- LOGO SLIDER -->
             <div class="logo-slider">
-
                 <div class="logo-track">
-
-                    <!-- SET 1 -->
                     <img src="public/mrmotors.png" alt="">
                     <img src="public/sbs.png" alt="">
                     <img src="public/jp.png" alt="">
                     <img src="public/city.jpg" alt="">
                     <img src="public/bosch-logo.png" alt="">
 
-                    <!-- DUPLICATE FOR SMOOTH LOOP -->
                     <img src="public/mrmotors.png" alt="">
                     <img src="public/sbs.png" alt="">
                     <img src="public/jp.png" alt="">
                     <img src="public/city.jpg" alt="">
                     <img src="public/bosch-logo.png" alt="">
-
                 </div>
-
             </div>
 
         </div>
     </section>
 
-    <!-- ENQUIRY FORM -->
+    <!-- ENQUIRY -->
     <section id="enquiry" class="section alt">
-
         <div class="container">
 
             <h2>Make an Enquiry</h2>
 
             <div class="form-box">
 
-                <form>
+                <form autocomplete="on">
 
-                    <input type="text" placeholder="Full Name" required>
-
-                    <input type="email" placeholder="Email Address" required>
-
-                    <input type="tel" placeholder="Phone Number">
+                    <input type="text" placeholder="Full Name" required autocomplete="name">
+                    <input type="email" placeholder="Email Address" required autocomplete="email">
+                    <input type="tel" placeholder="Phone Number" autocomplete="tel">
 
                     <select required>
                         <option value="">Select Service</option>
@@ -358,44 +276,119 @@
                         <option>Car Wash & Detailing</option>
                     </select>
 
-                    <textarea placeholder="Your Message"></textarea>
+                    <textarea placeholder="Your Message" rows="5"></textarea>
 
-                    <button type="submit" class="btn">
-                        Send Enquiry
-                    </button>
+                    <button type="submit" class="btn">Send Enquiry</button>
 
                 </form>
 
             </div>
 
         </div>
-
     </section>
-
-    <!-- CONTACT -->
+    <!-- FOOTER -->
     <footer id="contact" class="footer">
+        <div class="container footer-grid">
 
-        <div class="container">
+            <!-- COMPANY -->
+            <div class="footer-col">
+                <div class="footer-logo">
+                    <img src="public/mula.png" alt="Mulaudzi Solutions Logo">
+                    <h3>Mulaudzi Solutions</h3>
+                </div>
 
-            <h2>Contact Us</h2>
+                <p>
+                    Professional cleaning, hygiene, PPE, fragrance, and car wash
+                    solutions for homes, businesses, and industries.
+                </p>
 
-            <p>www.mulaudzisolutions.co.za</p>
+                <div class="footer-socials">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
 
-            <p>sales@mulaudzisolutions.co.za</p>
+            <!-- QUICK LINKS -->
+            <div class="footer-col">
+                <h4>Quick Links</h4>
 
-            <p>079 213 0538 / 073 260 5131</p>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Products & Services</a></li>
+                    <li><a href="#team">Leadership Team</a></li>
+                    <li><a href="#enquiry">Enquiries</a></li>
+                </ul>
+            </div>
 
-            <p class="small">
-                © Mulaudzi Solutions Pty Ltd
-            </p>
+            <!-- SERVICES -->
+            <div class="footer-col">
+                <h4>Services</h4>
+
+                <ul>
+                    <li>Household Cleaning</li>
+                    <li>Industrial Chemicals</li>
+                    <li>PPE Supply</li>
+                    <li>Car Wash & Detailing</li>
+                    <li>Fragrance Diffusers</li>
+                </ul>
+            </div>
+
+            <!-- CONTACT -->
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+
+                <p>
+                    <i class="fas fa-envelope"></i>
+                    sales@mulaudzisolutions.co.za
+                </p>
+
+                <p>
+                    <i class="fas fa-phone"></i>
+                    079 213 0538
+                </p>
+
+                <p>
+                    <i class="fas fa-phone"></i>
+                    073 260 5131
+                </p>
+
+                <p>
+                    <i class="fas fa-globe"></i>
+                    © 2026 Mulaudzi Solutions Pty Ltd. All Rights Reserved.
+                </p>
+                </p>
+            </div>
 
         </div>
 
+        <!-- BOTTOM -->
+        <div class="footer-bottom">
+            <p>
+                By KGR Solutions. <a href="https://kgrsolutions.co.za" target="_blank">Visit our website</a>.
+            </p>
+        </div>
     </footer>
-    <!-- WhatsApp Floating Button -->
+    <!-- WHATSAPP -->
     <a href="https://wa.me/27721234567" class="whatsapp-float" target="_blank">
         <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp Chat">
     </a>
+    <script>
+        const menuToggle = document.getElementById("menu-toggle");
+        const navLinks = document.getElementById("nav-links");
+
+        menuToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+
+        document.querySelectorAll(".nav-links a").forEach(link => {
+            link.addEventListener("click", () => {
+                navLinks.classList.remove("active");
+            });
+        });
+    </script>
+
 </body>
 
 </html>
