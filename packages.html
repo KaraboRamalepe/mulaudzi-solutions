@@ -5,11 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Packages | Mulaudzi Solutions</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
-<body>
-
+<body class="packages-page">
     <!-- NAVBAR -->
     <nav class="navbar">
         <div class="container nav-content">
@@ -19,10 +22,15 @@
                 <span>Mulaudzi Solutions</span>
             </div>
 
-            <ul class="nav-links">
+            <button class="menu-toggle" id="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class="nav-links" id="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#services">Services</a></li>
-                <li><a href="packages.html">Packages</a></li>
+                <li><a href="#household">Household</a></li>
+                <li><a href="#carwash">Car Wash</a></li>
+                <li><a href="#downloads">Downloads</a></li>
                 <li><a href="index.html#contact">Contact</a></li>
             </ul>
 
@@ -30,50 +38,414 @@
     </nav>
 
     <!-- HERO -->
-    <header class="hero">
-        <div class="container">
+    <header class="packages-hero">
 
-            <h1>Our Packages</h1>
-            <p>Affordable cleaning, car wash & industrial solutions for everyone</p>
+        <div class="hero-overlay"></div>
+
+        <div class="container hero-content">
+
+            <span class="hero-tag">
+                PROFESSIONAL CLEANING CHEMICALS
+            </span>
+
+            <h1>
+                Product Price Lists
+            </h1>
+
+            <p>
+                Professional household chemicals, industrial cleaning products,
+                detailing chemicals, car wash solutions & accessories for homes,
+                businesses and commercial industries.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#household" class="btn">
+                    Household Products
+                </a>
+
+                <a href="#carwash" class="btn btn-outline">
+                    Car Wash Products
+                </a>
+
+            </div>
 
         </div>
+
     </header>
 
-    <!-- PRICING -->
-    <section class="section">
+    <!-- DOWNLOADS -->
+    <section id="downloads" class="section">
 
-        <div class="container grid-2">
+        <div class="container">
 
-            <!-- Basic Wash -->
-            <div class="card">
-                <h2>Basic Wash</h2>
-                <h3>R80 - R120</h3>
-                <p>Exterior wash, rinse & dry</p>
-                <a href="index.html#enquiry" class="btn">Book Now</a>
+            <div class="section-title">
+                <span>DOWNLOADS</span>
+                <h2>Download Price Lists</h2>
             </div>
 
-            <!-- Full Detail -->
-            <div class="card">
-                <h2>Full Detail</h2>
-                <h3>R250 - R450</h3>
-                <p>Interior + exterior deep cleaning</p>
-                <a href="index.html#enquiry" class="btn">Book Now</a>
+            <div class="download-wrapper">
+
+                <!-- DOWNLOAD CARD -->
+                <div class="download-card">
+
+                    <div class="download-icon">
+                        <i class="fa-solid fa-file-pdf"></i>
+                    </div>
+
+                    <h3>Household Products PDF</h3>
+
+                    <p>
+                        Download the complete household cleaning chemicals
+                        and accessories catalogue.
+                    </p>
+
+                    <a href="documents/household-price-list.pdf"
+                        download
+                        class="btn">
+                        Download PDF
+                    </a>
+
+                </div>
+
+                <!-- DOWNLOAD CARD -->
+                <div class="download-card">
+
+                    <div class="download-icon">
+                        <i class="fa-solid fa-file-pdf"></i>
+                    </div>
+
+                    <h3>Car Wash Products PDF</h3>
+
+                    <p>
+                        Download the full car wash, detailing chemicals
+                        and accessories catalogue.
+                    </p>
+
+                    <a href="documents/carwash-price-list.pdf"
+                        download
+                        class="btn">
+                        Download PDF
+                    </a>
+
+                </div>
+
             </div>
 
-            <!-- Premium Detail -->
-            <div class="card">
-                <h2>Premium Detail</h2>
-                <h3>R500+</h3>
-                <p>Full valet, polish & engine clean</p>
-                <a href="index.html#enquiry" class="btn">Book Now</a>
+        </div>
+
+    </section>
+
+    <!-- HOUSEHOLD PRODUCTS -->
+    <section id="household" class="section alt">
+
+        <div class="container">
+
+            <div class="section-title">
+                <span>HOUSEHOLD CHEMICALS</span>
+                <h2>Household Products Price List</h2>
             </div>
 
-            <!-- Industrial Cleaning -->
-            <div class="card">
-                <h2>Industrial Cleaning</h2>
-                <h3>Quote Based</h3>
-                <p>Factories, offices & commercial spaces</p>
-                <a href="index.html#enquiry" class="btn">Request Quote</a>
+            <div class="table-wrapper">
+
+                <table class="price-table">
+
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>5 Litre</th>
+                            <th>25 Litre</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Bleach 6%</td>
+                            <td>R100</td>
+                            <td>R300</td>
+                        </tr>
+
+                        <tr>
+                            <td>Super Dish Wash</td>
+                            <td>R100</td>
+                            <td>R300</td>
+                        </tr>
+
+                        <tr>
+                            <td>Stay Soft (Peach & Lavender)</td>
+                            <td>R100</td>
+                            <td>R300</td>
+                        </tr>
+
+                        <tr>
+                            <td>Washing Powder Auto</td>
+                            <td>R120</td>
+                            <td>R450</td>
+                        </tr>
+
+                        <tr>
+                            <td>Washing Powder Hand</td>
+                            <td>R120</td>
+                            <td>R450</td>
+                        </tr>
+
+                        <tr>
+                            <td>Laundry Liquid</td>
+                            <td>R100</td>
+                            <td>R300</td>
+                        </tr>
+
+                        <tr>
+                            <td>Floor & Tile Cleaner</td>
+                            <td>R100</td>
+                            <td>R300</td>
+                        </tr>
+
+                        <tr>
+                            <td>Kitchen Fat Degreaser</td>
+                            <td>R120</td>
+                            <td>R300</td>
+                        </tr>
+
+                        <tr>
+                            <td>Handy Andy Cleaner</td>
+                            <td>R100</td>
+                            <td>R300</td>
+                        </tr>
+
+                        <tr>
+                            <td>Oven Cleaner</td>
+                            <td>R120</td>
+                            <td>R300</td>
+                        </tr>
+
+                        <tr>
+                            <td>Pine Gel</td>
+                            <td>R150</td>
+                            <td>R700</td>
+                        </tr>
+
+                        <tr>
+                            <td>Citrus Gel</td>
+                            <td>R200</td>
+                            <td>R900</td>
+                        </tr>
+
+                        <tr>
+                            <td>Disinfectant Detergent</td>
+                            <td>R100</td>
+                            <td>R350</td>
+                        </tr>
+
+                        <tr>
+                            <td>Furniture Polish</td>
+                            <td>R180</td>
+                            <td>R750</td>
+                        </tr>
+
+                        <tr>
+                            <td>Toilet Bowl Cleaner</td>
+                            <td>R100</td>
+                            <td>R300</td>
+                        </tr>
+
+                        <tr>
+                            <td>Hi Shine Floor Polish</td>
+                            <td>R250</td>
+                            <td>R950</td>
+                        </tr>
+
+                        <tr>
+                            <td>Bubble Bath</td>
+                            <td>R90</td>
+                            <td>R300</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <div class="note-box">
+
+                <i class="fa-solid fa-circle-info"></i>
+
+                <p>
+                    All 25L containers are on exchange basis.
+                    If not exchanged, a R50 replacement fee will apply.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CAR WASH PRODUCTS -->
+    <section id="carwash" class="section">
+
+        <div class="container">
+
+            <div class="section-title">
+                <span>CAR WASH & DETAILING</span>
+                <h2>Car Wash Products Price List</h2>
+            </div>
+
+            <div class="table-wrapper">
+
+                <table class="price-table">
+
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>5 Litre</th>
+                            <th>25 Litre</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Silicone Tyre Shine</td>
+                            <td>R250</td>
+                            <td>R850</td>
+                        </tr>
+
+                        <tr>
+                            <td>Super Ultra Tyre Shine</td>
+                            <td>R250</td>
+                            <td>R850</td>
+                        </tr>
+
+                        <tr>
+                            <td>Tyre Gel</td>
+                            <td>R250</td>
+                            <td>R850</td>
+                        </tr>
+
+                        <tr>
+                            <td>Wash & Shine Shampoo</td>
+                            <td>R100</td>
+                            <td>R270</td>
+                        </tr>
+
+                        <tr>
+                            <td>Hi Foam Shampoo</td>
+                            <td>R100</td>
+                            <td>R270</td>
+                        </tr>
+
+                        <tr>
+                            <td>Auto Foam Shampoo</td>
+                            <td>R120</td>
+                            <td>R350</td>
+                        </tr>
+
+                        <tr>
+                            <td>Heavy Duty Cleaner</td>
+                            <td>R120</td>
+                            <td>R300</td>
+                        </tr>
+
+                        <tr>
+                            <td>Engine Cleaner</td>
+                            <td>R120</td>
+                            <td>R300</td>
+                        </tr>
+
+                        <tr>
+                            <td>Magwheel Cleaner</td>
+                            <td>R150</td>
+                            <td>R350</td>
+                        </tr>
+
+                        <tr>
+                            <td>Leather Cream</td>
+                            <td>R250</td>
+                            <td>R800</td>
+                        </tr>
+
+                        <tr>
+                            <td>Silicone Dash Perfume</td>
+                            <td>R300</td>
+                            <td>R1300</td>
+                        </tr>
+
+                        <tr>
+                            <td>Window Cleaner</td>
+                            <td>R150</td>
+                            <td>R400</td>
+                        </tr>
+
+                        <tr>
+                            <td>Car Polish</td>
+                            <td>R250</td>
+                            <td>R1100</td>
+                        </tr>
+
+                        <tr>
+                            <td>Driveway & Paving Cleaner</td>
+                            <td>R150</td>
+                            <td>R400</td>
+                        </tr>
+
+                        <tr>
+                            <td>Leather Cleaning Fluid</td>
+                            <td>R150</td>
+                            <td>R400</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <div class="note-box">
+
+                <i class="fa-solid fa-circle-info"></i>
+
+                <p>
+                    All 25L containers are on exchange basis.
+                    If not exchanged, a R50 replacement fee will apply.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CONTACT STRIP -->
+    <section class="contact-strip">
+
+        <div class="container contact-strip-grid">
+
+            <div>
+
+                <h3>Need Bulk Orders?</h3>
+
+                <p>
+                    Contact our sales team for wholesale pricing
+                    and commercial supply solutions.
+                </p>
+
+            </div>
+
+            <div class="contact-numbers">
+
+                <div>
+                    <strong>Shane</strong>
+                    <span>079 213 0538</span>
+                </div>
+
+                <div>
+                    <strong>Chulu</strong>
+                    <span>073 260 5131</span>
+                </div>
+
             </div>
 
         </div>
@@ -81,11 +453,98 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container">
-            <p>© Mulaudzi Solutions Pty Ltd</p>
+    <footer id="contact" class="footer">
+        <div class="container footer-grid">
+
+            <!-- COMPANY -->
+            <div class="footer-col">
+                <div class="footer-logo">
+                    <img src="public/mula.png" alt="Mulaudzi Solutions Logo">
+                    <h3>Mulaudzi Solutions</h3>
+                </div>
+
+                <p>
+                    Professional cleaning, hygiene, PPE, fragrance, and car wash
+                    solutions for homes, businesses, and industries.
+                </p>
+
+                <div class="footer-socials">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <!-- QUICK LINKS -->
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Products & Services</a></li>
+                    <li><a href="#team">Leadership Team</a></li>
+                    <li><a href="#enquiry">Enquiries</a></li>
+                </ul>
+            </div>
+
+            <!-- SERVICES -->
+            <div class="footer-col">
+                <h4>Services</h4>
+
+                <ul>
+                    <li>Household Cleaning</li>
+                    <li>Industrial Chemicals</li>
+                    <li>PPE Supply</li>
+                    <li>Car Wash & Detailing</li>
+                    <li>Fragrance Diffusers</li>
+                </ul>
+            </div>
+
+            <!-- CONTACT -->
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+
+                <p>
+                    <i class="fas fa-envelope"></i>
+                    sales@mulaudzisolutions.co.za
+                </p>
+
+                <p>
+                    <i class="fas fa-phone"></i>
+                    079 213 0538
+                </p>
+
+                <p>
+                    <i class="fas fa-phone"></i>
+                    073 260 5131
+                </p>
+
+                <p>
+                    <i class="fas fa-globe"></i>
+                    © 2026 Mulaudzi Solutions Pty Ltd. All Rights Reserved.
+                </p>
+                </p>
+            </div>
+
+        </div>
+
+        <!-- BOTTOM -->
+        <div class="footer-bottom">
+            <p>
+                By KGR Solutions. <a href="https://kgrsolutions.co.za" target="_blank">Visit our website</a>.
+            </p>
         </div>
     </footer>
+    <!-- MOBILE MENU JS -->
+    <script>
+        const menuToggle = document.getElementById("menu-toggle");
+        const navLinks = document.getElementById("nav-links");
+
+        menuToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+    </script>
 
 </body>
 
