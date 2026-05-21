@@ -1018,6 +1018,25 @@ body {
 }
 
 /* LOGO */
+.logo-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    text-decoration: none;
+    color: white;
+
+    transition: 0.3s ease;
+}
+
+.logo-box:hover {
+    transform: scale(1.03);
+}
+
+.logo-box span {
+    font-size: 20px;
+    font-weight: bold;
+}
 .footer-logo {
     display: flex;
     align-items: center;
