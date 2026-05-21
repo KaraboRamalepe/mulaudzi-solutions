@@ -1633,6 +1633,90 @@ S
 }
 
 /* TABLES */
+/* =========================
+   MODERN PRODUCT TABLE HOVER
+========================= */
+
+.packages-page .price-table tbody tr {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* ROW HOVER */
+.packages-page .price-table tbody tr:hover {
+    background: linear-gradient(
+        to right,
+        rgba(131,156,216,0.12),
+        rgba(255,255,255,1)
+    );
+
+    transform: scale(1.01);
+
+    box-shadow: inset 4px 0 0 #839cd8;
+}
+
+/* PRODUCT NAME */
+.packages-page .price-table tbody tr td:first-child {
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+/* PRODUCT NAME HOVER */
+.packages-page .price-table tbody tr:hover td:first-child {
+    color: #2563eb;
+    padding-left: 18px;
+}
+
+/* PRICE CELLS */
+.packages-page .price-table td:nth-child(2),
+.packages-page .price-table td:nth-child(3) {
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+/* PRICE HOVER EFFECT */
+.packages-page .price-table tbody tr:hover td:nth-child(2),
+.packages-page .price-table tbody tr:hover td:nth-child(3) {
+    color: red;
+
+    transform: scale(1.08);
+
+    text-shadow: 0 0 10px rgba(255,0,0,0.2);
+}
+
+/* SMOOTH TABLE LOOK */
+.packages-page .price-table {
+    overflow: hidden;
+    border-radius: 18px;
+}
+
+/* ALTERNATING ROW COLORS */
+.packages-page .price-table tbody tr:nth-child(even) {
+    background: rgba(248,250,252,0.7);
+}
+
+/* HEADER IMPROVEMENT */
+.packages-page .price-table th {
+    position: sticky;
+    top: 0;
+
+    background: linear-gradient(
+        135deg,
+        #839cd8,
+        #546793
+    );
+
+    letter-spacing: 0.5px;
+}
+
+/* TABLE SHADOW */
+.packages-page .table-wrapper {
+    border-radius: 18px;
+    overflow: hidden;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.06);
+}
 .packages-page .table-wrapper {
     overflow-x: auto;
 }
