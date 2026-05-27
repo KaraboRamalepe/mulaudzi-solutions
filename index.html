@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel="icon" type="image/png" href="public/mula.png">
 
 <head>
     <meta charset="UTF-8" />
@@ -8,8 +9,14 @@
 
     <link rel="stylesheet" href="style.css" />
     <meta name="theme-color" content="#839cd8">
-
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
     <!-- FONT AWESOME -->
+
+    <meta name="description"
+        content="Professional cleaning, hygiene, PPE and industrial solutions by Mulaudzi Solutions.">
+    <meta name="keywords" content="cleaning services, industrial chemicals, PPE, car wash, hygiene solutions">
+    <meta name="author" content="Mulaudzi Solutions">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
@@ -31,7 +38,7 @@
             <!-- Links (FIXED ID for JS) -->
             <ul id="nav-links" class="nav-links">
                 <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
+                <li><a href="#services-flow">Services</a></li>
                 <li><a href="#team">Team</a></li>
                 <li><a href="#enquiry">Enquiry</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -63,7 +70,10 @@
                 </p>
 
                 <div class="hero-buttons">
-                    <a href="#contact" class="btn">Book Now</a>
+                    <a href="https://wa.me/27792130538?text=Hi%20I%20want%20to%20book%20a%20service" class="btn"
+                        target="_blank">
+                        Book Now
+                    </a>
                     <a href="packages.html" class="btn btn-outline">View Packages</a>
                 </div>
 
@@ -141,6 +151,9 @@
                         <li>Deep Cleaning & Sanitization</li>
                         <li>Carpet & Upholstery Care</li>
                     </ul>
+                    <a href="packages.html" class="learn-btn">
+                        Learn More
+                    </a>
                 </div>
 
                 <div class="step">
@@ -151,6 +164,9 @@
                         <li>Car-wash Shampoo</li>
                         <li>Cleaning Solutions</li>
                     </ul>
+                    <a href="packages.html" class="learn-btn">
+                        Learn More
+                    </a>
                 </div>
 
                 <div class="step">
@@ -161,6 +177,9 @@
                         <li>Safety Goggles</li>
                         <li>Protective Clothing</li>
                     </ul>
+                    <a href="packages.html" class="learn-btn">
+                        Learn More
+                    </a>
                 </div>
 
                 <div class="step">
@@ -171,6 +190,9 @@
                         <li>Wax & Polish</li>
                         <li>Engine Cleaning</li>
                     </ul>
+                    <a href="packages.html" class="learn-btn">
+                        Learn More
+                    </a>
                 </div>
 
                 <div class="step">
@@ -181,6 +203,9 @@
                         <li>Reed Diffusers</li>
                         <li>Essential Oils</li>
                     </ul>
+                    <a href="packages.html" class="learn-btn">
+                        Learn More
+                    </a>
                 </div>
 
                 <div class="step">
@@ -191,12 +216,16 @@
                         <li>Client Support</li>
                         <li>Bulk Orders</li>
                     </ul>
+                    <a href="packages.html" class="learn-btn">
+                        Learn More
+                    </a>
                 </div>
 
             </div>
 
         </div>
     </section>
+
     <!-- TEAM -->
     <section id="team" class="section alt">
         <div class="container">
@@ -263,13 +292,15 @@
 
             <div class="form-box">
 
-                <form autocomplete="on">
+                <form id="enquiryForm" autocomplete="on">
 
-                    <input type="text" placeholder="Full Name" required autocomplete="name">
-                    <input type="email" placeholder="Email Address" required autocomplete="email">
-                    <input type="tel" placeholder="Phone Number" autocomplete="tel">
+                    <input type="text" id="name" placeholder="Full Name" required autocomplete="name">
 
-                    <select required>
+                    <input type="email" id="email" placeholder="Email Address" required autocomplete="email">
+
+                    <input type="tel" id="phone" placeholder="Phone Number" autocomplete="tel">
+
+                    <select id="service" required>
                         <option value="">Select Service</option>
                         <option>Household Cleaning</option>
                         <option>Industrial Chemicals</option>
@@ -277,13 +308,16 @@
                         <option>Car Wash & Detailing</option>
                     </select>
 
-                    <textarea placeholder="Your Message" rows="5"></textarea>
+                    <textarea id="message" placeholder="Your Message" rows="5"></textarea>
 
-                    <button type="submit" class="btn">Send Enquiry</button>
+                    <button type="submit" class="btn">
+                        Send Enquiry
+                    </button>
 
                 </form>
 
             </div>
+            <div id="toast">Enquiry sent successfully!</div>
 
         </div>
     </section>
@@ -371,6 +405,7 @@
             </p>
         </div>
     </footer>
+    <a href="#" class="scroll-top" id="scrollTopBtn">↑</a>
     <!-- WHATSAPP -->
     <a href="https://wa.me/27721234567" class="whatsapp-float" target="_blank">
         <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp Chat">
@@ -379,17 +414,42 @@
         const menuToggle = document.getElementById("menu-toggle");
         const navLinks = document.getElementById("nav-links");
 
-        menuToggle.addEventListener("click", () => {
-            navLinks.classList.toggle("active");
-        });
-
-        document.querySelectorAll(".nav-links a").forEach(link => {
-            link.addEventListener("click", () => {
-                navLinks.classList.remove("active");
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener("click", () => {
+                navLinks.classList.toggle("active");
             });
-        });
-    </script>
 
+            document.querySelectorAll(".nav-links a").forEach(link => {
+                link.addEventListener("click", () => {
+                    navLinks.classList.remove("active");
+                });
+            });
+        }
+
+        const scrollBtn = document.getElementById("scrollTopBtn");
+
+        if (scrollBtn) {
+
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > 300) {
+                    scrollBtn.classList.add("show");
+                } else {
+                    scrollBtn.classList.remove("show");
+                }
+            });
+
+            scrollBtn.addEventListener("click", (e) => {
+                e.preventDefault();
+
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+            });
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

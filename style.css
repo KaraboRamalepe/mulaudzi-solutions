@@ -431,6 +431,45 @@ body {
     background: #2563eb;
     color: white;
 }
+/* LEARN MORE BUTTON */
+.learn-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 10px;
+    padding: 6px 12px;
+
+    background: white;
+    color: #0f172a;
+
+    border-radius: 12px;
+
+    text-decoration: none;
+    font-weight: 600;
+
+    font-size: 13px;
+
+    transition: 0.3s ease;
+}
+
+/* HOVER */
+.learn-btn:hover {
+    background: red;
+    color: white;
+
+    transform: translateY(-3px);
+}
+
+/* OPTIONAL ARROW EFFECT */
+.learn-btn::after {
+    content: " →";
+    transition: 0.3s ease;
+}
+
+.learn-btn:hover::after {
+    margin-left: 5px;
+}
 
 
 /* =========================
@@ -725,6 +764,30 @@ body {
     font-size: 20px;
     line-height: 1.9;
     color: rgba(255,255,255,0.9);
+}
+.why-choose {
+    margin-top: 25px;
+}
+
+.why-choose h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.why-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.why-list li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.85);
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 
@@ -1708,13 +1771,18 @@ S
 }
 
 .packages-page .download-card {
-    background: white;
+    background: linear-gradient(
+        to bottom right,
+        rgba(0,0,0,0.75),
+        rgba(37,99,235,0.45)
+    );
     padding: 25px;
     border-radius: 14px;
     text-align: center;
     box-shadow: 0 5px 20px rgba(0,0,0,0.05);
     transition: 0.3s ease;
 }
+
 
 .packages-page .download-card:hover {
     transform: translateY(-5px);
@@ -1874,4 +1942,73 @@ S
 
 .packages-page .btn:hover {
     background: red;
+}
+
+.scroll-top {
+    position: fixed;
+
+    bottom: 90px; /* 👈 moved up above WhatsApp button */
+    right: 20px;
+
+    width: 45px;
+    height: 45px;
+
+    background-color: #546793;
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px);
+
+    transition: 0.3s ease;
+    z-index: 9999;
+}
+
+/* SHOW STATE */
+.scroll-top.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.scroll-top:hover {
+    background: red;
+}
+#toast {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: #28a745;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    padding: 12px;
+    position: fixed;
+    z-index: 9999;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+}
+
+#toast.show {
+    visibility: visible;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@keyframes fadein {
+    from { bottom: 0; opacity: 0; }
+    to { bottom: 30px; opacity: 1; }
+}
+
+@keyframes fadeout {
+    from { bottom: 30px; opacity: 1; }
+    to { bottom: 0; opacity: 0; }
 }
